@@ -7,13 +7,17 @@ import {
   Link
 } from "react-router-dom";
 
-import  Signup from './SignUp';
-import  Navigation from './Navigation';
+
+import Navigation from './Navigation';
+import SignUp from './SignUp';
+import Login from './Login';
+import Home from './Home';
 
 
 
 
-export default function App() {
+
+function App() {
   return (
     <Router>
       <div className="App">
@@ -22,8 +26,14 @@ export default function App() {
         </nav>
         <main>
           <Switch>
-            <Route path="/signup">
-              <Signup />
+            <Route path="/SignUp">
+              <SignUp />
+            </Route>
+            <Route path="/Login">
+              <Login />
+            </Route>
+            <Route path="/">
+              <Home />
             </Route>
           </Switch>
         </main>
@@ -32,14 +42,4 @@ export default function App() {
   );
 }
 
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-// function Login() {
-//   return <h2>Login</h2>;
-// }
-
-// function SingUp() {
-//   return <h2>SingUp</h2>;
-// }
+export default App;
